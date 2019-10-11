@@ -1,0 +1,89 @@
+<div id="wrapper">
+ 
+    <nav class="navbar-default navbar-static-side" role="navigation" id="navs">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header" style="text-align:center;padding: 20px 0;margin:0px 0 0px -10px;background: #333";>
+                    <div class="dropdown profile-element"> 
+                        <img src="__IMG__/logo.png" class="logo-bg">
+                    </div>
+                    <div class="logo-element" style="padding: 0">
+                       <img src="__IMG__/gk.png" class="logo-bg">
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="{:url('admin/index/index')}"><i class="fa fa-home"></i> <span class="nav-label">极客小寨</span> <span class="label label-primary pull-right">NEW</span></a>
+                </li>
+                 <li>
+                    <a href="index.html"><i class="fa fa-user"></i> <span class="nav-label">系统管理</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>                            
+                            <a href="/admin/user/index">用户列表</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa-cubes"></i> <span class="nav-label">内容管理</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>                            
+                            <a href="/admin/category/index">分类列表</a>
+                        </li>
+                        <li>                            
+                            <a href="/admin/article/index">文章列表</a>
+                        </li>
+                        <li>                            
+                            <a href="/admin/comment/index">评论列表</a>
+                        </li>
+                        <li>                            
+                            <a href="/admin/links/index">友情连接</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="index.html"><i class="fa fa-gamepad"></i> <span class="nav-label">应用中心</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">                    
+                        <li>                            
+                            <a href="https://www.geekxz.com/theme/14.html" target="_blank">主题模板</a>
+                        </li>                 
+                        <li>                            
+                            <a href="https://www.geekxz.com/thread/21.html">疑难问答</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                <a href="{:url('admin/login/loginout')}"><i class="fa fa-sign-out"></i> <span class="nav-label">退出登录</span> <span class="fa arrow"></span></a>
+                </li>
+            </ul>
+    </nav>
+</div>
+<div id="page-wrapper" class="gray-bg" style="overflow: hidden;">
+<div class="row border-bottom">
+	<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+		<div class="navbar-header">
+			<a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+			<form role="search" class="navbar-form-custom" method="post">
+				<div class="form-group">
+					<input type="text" placeholder="人痛苦的本质都是对自己无能的愤怒" class="form-control" style="width: 500px;" disabled="">
+				</div>
+			</form>
+		</div>
+		<ul class="nav navbar-top-links navbar-right">
+			<li>
+				<span class="m-r-sm text-muted welcome-message">每一个你不满意的现在,都有一个你不努力的曾经.</span>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">欢迎你，{$Think.session.username}</a>
+				<ul class="dropdown-menu animated fadeInRight m-t-xs">
+					{if condition="$Think.session.username neq 'admin'"}                        
+                    <li><a class="J_menuItem" href="/Admin/user/edit/id/{$Think.session.id}.html">修改用户名</a></li>
+                    {/if}
+                    <li><a class="J_menuItem" href="/Admin/user/editpwd/id/{$Think.session.id}.html">修改密码</a></li>
+                    <li class="divider"></li>
+					<li><a href="{:url('admin/Login/loginOut')}">安全退出</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</div>

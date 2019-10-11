@@ -1,0 +1,371 @@
+{extend name="public/base" /}
+
+
+
+{block name="sidebar"}{/block}
+
+
+
+{block name="style"}
+
+<style type="text/css">
+        .box{
+            width: 96%;
+            margin: 0 auto;
+            color: #2c3e50;
+        }        
+        .welcome{
+            width: 54%;
+            float: left;
+            height: 150px;
+            color: #fff;
+            position: relative;
+        }            
+        .team{
+            width: 44%;
+            float: right;
+            height: 150px;
+            position: relative;
+        }
+        .subtitle{
+            padding-bottom: 25px;
+        }
+        .subtitle p{
+            height: 22px;
+            line-height: 22px;
+            color: #fff;
+        }
+        .subtitle p a{ 
+            width: 170px;
+            color: #fff;
+            display: block;
+            text-align: center;
+            border-radius: 10px;
+            background: #2c5fe9;
+            margin-top: 5px;
+        }
+        .welcome-bg{
+            position: absolute;
+            bottom: -15px;
+            right: 10px;
+            width: 300px;
+            height: 120px;
+        }
+        .code{
+            position: absolute;
+            bottom: 30px;
+            right: 20px;
+            height: 80px;
+            text-align: center;
+        }
+        .code-bg{
+            width: 80px;
+            height: 80px;
+        }
+        .code p{
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 10px;
+        }
+        .we-bg{
+            background: #4577ff;
+        }
+        .team-bg{            
+            background:#ffb08b;
+        }
+        .team ul{
+            font-size: 15px;
+        }
+        .team span{
+            color: #fff;
+        }
+        .total{ 
+            width: 96%;
+            margin: 0 auto;
+            height: 100px;
+            margin-top: 35px;
+            /*border: 1px solid red;*/
+        }
+        .total .item{
+            width: 23.5%;
+            height: 100px;
+            /*background: #fff;*/
+            float: left;
+            margin-right: 2%;
+            border-radius: 10px;
+        }
+        .total .widget{
+            background: #fff;
+        }
+        .total .widget span{
+            /*height: 60px;*/
+            /*line-height: 60px;*/
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .total .widget h2{
+            /*height: 60px;*/
+            /*line-height: 60px;*/
+            font-size: 30px;
+            margin-top: 15px;
+        }
+        .total .item:last-child{
+
+            margin-right: 0;
+        }
+        .total .widget{
+            margin: 0;
+            padding: 0;
+        }
+        .total .ico{
+            background: #ccc;
+            padding: 15px 0px;
+            margin-left: 12px;
+            border-radius: 10px 0 0 10px;
+        }
+        .total .ext{
+            padding: 15px 20px;
+        }
+        .content{ 
+            width: 96%;
+            margin: 0 auto;
+            height: auto;
+            margin-top: 20px;
+            /*border: 1px solid red;*/
+        }
+        .user-box{
+            width: 30%;
+            height: 320px;
+            float: left;
+            border-radius: 10px;
+            
+            box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+        
+        .art-box{
+            width: 68%;
+            height: 320px;
+            float: right;
+            border-radius: 10px;
+            box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+        .content .tit{
+            height: 60px;
+            line-height: 60px;
+            padding-left: 20px;
+            font-size: 16px;
+            /*border: 1px solid red;*/
+        }
+        .info{
+            text-align: center;
+        }
+        .user-bg{
+            width: 140px;
+            height: 140px;
+            border-radius: 140px;
+            margin-top: 10px;
+            box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+        }
+        .ext ul li{
+            width: 33.33%;
+            float: left;;
+            height: 80px;
+            margin-top: 15px;
+        }
+
+        .ext ul li label{
+            display: block;
+            height: 40px;
+            line-height: 60px;
+            font-size: 22px;
+            /*border: 1px solid red;*/
+        }
+        .art .item{
+            height: 110px;
+            margin-bottom: 20px;
+        } 
+        .art-bg{
+            width: 110px;
+            height: 110px;
+            border-radius: 10px;
+            margin-left: 2%;
+            float: left;
+            border-radius: 10px;
+            box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+        }
+        .art .text{
+            float: right;
+            width: 84%;
+            padding: 0 10px;
+        }
+        .art .text p{
+           height: 40px;
+           line-height: 40px;
+           font-size: 16px;
+           font-weight: 800
+        }
+    </style>
+{/block}
+
+
+
+{block name="body"}
+
+    <!-- 主体 -->
+    <br>
+    <div class="row">
+
+        <div class="box">
+            <div class="welcome item">
+                <div class="widget we-bg text-left">
+                    <div class="m-b-md">
+                        <h2>欢迎来到极客小寨工作室</h2>
+                    </div>
+                    <div class="subtitle">
+                        <p>您还可以点击极客小寨工作室官方网站，查看更多作品</p>
+                        <p><a href="http://www.geekxz.com">http://www.geekxz.com</a></p>
+                    </div>
+                </div>
+                <img src="__IMG__/header-bg.png" class="welcome-bg">
+            </div>
+
+            <div class="item team">
+                <div class="widget team-bg text-left">                    
+                    <h2>产品团队</h2>
+                    <ul class="list-unstyled m-t-md">
+                        <li>
+                            <label>策划&nbsp;&nbsp;</label>
+                            <span> 陈东东 </span>
+                        </li>
+                        <li>
+                            <label>研发&nbsp;&nbsp;</label>
+                            <span> 王小婷 </span>&nbsp;&nbsp;
+                            <span> Jack Huan </span>&nbsp;&nbsp;
+                            <span> 兔子 </span>&nbsp;&nbsp;
+                        </li>
+                        <li>
+                            <label>设计&nbsp;&nbsp;</label>
+                            <span> 蔡东东 </span>
+                        </li> 
+                    </ul>                
+                </div> 
+                <div class="code">
+                    <img src="__IMG__/geekxz-code.jpg" class="code-bg">
+                    <p>极客小寨工作室公众号</p>
+                </div>         
+            </div>            
+        </div>
+        <div style="clear: both;"></div>
+        <div class="total">
+            <div class="item">
+                <div class="widget">
+                    <div class="row">
+                        <div class="col-xs-4 text-center ico">
+                            <i class="fa fa-user fa-5x"></i>
+                        </div>
+                        <div class="col-xs-7 text-right ext">
+                            <span> 总访问量 </span>
+                            <h2 class="font-bold"> 4,2320</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget">
+                    <div class="row">
+                        <div class="col-xs-4 text-center ico">
+                            <i class="fa fa-user fa-5x"></i>
+                        </div>
+                        <div class="col-xs-7 text-right ext">
+                            <span> 总访用户 </span>
+                            <h2 class="font-bold"> 51,862</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget">
+                    <div class="row">
+                        <div class="col-xs-4 text-center ico">
+                            <i class="fa fa-user fa-5x"></i>
+                        </div>
+                        <div class="col-xs-7 text-right ext">
+                            <span> 新增访问量（月） </span>
+                            <h2 class="font-bold"> 1,862</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="widget">
+                    <div class="row">
+                        <div class="col-xs-4 text-center ico">
+                            <i class="fa fa-user fa-5x"></i>
+                        </div>
+                        <div class="col-xs-7 text-right ext">
+                            <span> 新增访问量（月） </span>
+                            <h2 class="font-bold"> 1,862</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <div class="content">
+            <div class="user-box">
+                <div class="tit">个人信息</div>
+                <div class="info">
+                    <img src="__IMG__/logo.jpg" class="user-bg">
+                    <div class="ext">
+                        <ul>
+                            <li>
+                                <label>45465</label>
+                                <span> 访问量 </span>
+                            </li>
+                            <li>
+                                <label>4578</label>
+                                <span> 粉丝 </span>
+                            </li>
+                            <li>
+                                <label>52</label>
+                                <span> 作品 </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="art-box">
+                <div class="tit">文章</div>
+                <div class="art">
+                    <div class="item">
+                        <img src="/uploads/20170522/ca5c823d63ed0ee6be50e495c0f4511a_thumb_240_160.jpg" class="art-bg">
+                        <div class="text">
+                            <p>从 I/O 大会看谷歌如何推动 VR/AR 的生态发展和技术边界 | Google I/O 2017</p>
+                            <div class="art-content">谷歌的 VR/AR 故事，一切还要从 Carboard 说起。当时所有人都以为谷歌在跟大家开玩笑，后来的故事众所周知，便宜但不廉价的 Cardboard 让更多的人知道 VR，同时 1000万（谷歌官方 2017 年3 月宣布的数据）的销量证明，谷歌对 Cardboard，也可以说对 VR 非常认真。</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/uploads/20190321/1fc98d9be3c409301bf07670b314ed97.png" class="art-bg">
+                        <div class="text">
+                            <p>如何为开源做贡献？</p>
+                            <div class="art-content">微信小程序-基于画布上画画涂鸦实现用户自定画笔大小，实现用户自定色彩，实现用户动画撤回之前的操作，实现生成分享海报，实现用户预览画作清除画布</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+     
+
+    </div>
+
+    
+
+{/block}
+
+
+
+{block name="script"}{/block}

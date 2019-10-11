@@ -1,0 +1,40 @@
+{extend name="public/base" /}
+{block name="title"}
+<title>极客小寨主题 | 又一个blog站点</title>
+{/block}
+{block name="style"}{/block}
+{block name="container"}
+
+
+<div class="m-header ">
+    <section id="hero1" class="hero">
+        <div class="inner"> </div>
+    </section>
+    <figure class="top-image" style="background-image: url( {if condition="!empty($geekxzc[0] )  &&  !empty($geekxzc[0]['cpic'])"}{$geekxzc[0]['cpic']}{else/}__HOMEIMG__/5.jpg{/if}  );"></figure>
+    <canvas height="550" width="1905" id="wave-canvas"></canvas>
+    <canvas id="wave-canvas"></canvas>
+    <canvas id="wave-canvas"></canvas>
+</div>
+<div class="wrapper">
+    <ul class="posts-list">
+        {volist name="geekxzc" id="vo"}
+        {if condition="$vo['choice'] eq 1"}
+        <!-- <i class="post-status fa fa-hacker-news">精选</i> -->
+        {/if} 
+        <li class="post">
+            <div class="type">
+                <div class="mask"> <i class="fa fa-file-text-o"></i> </div>
+            </div>
+            <h2 class="no-background"> <span> <a href="/thread/{$vo.id}.html">{$vo.title}</a> </span>
+                <div class="post-time"> {$vo.time|date="Y-m-d",###}</div>
+            </h2>
+            <div class="post-category"> <a href="#" rel="category tag">{$vo.name}</a></div>
+        </li>
+        {/volist}
+    </ul>
+    <div class="pages">{$geekxzc->render()}</div>
+</div>
+
+
+{/block}
+{block name="script"}{/block}

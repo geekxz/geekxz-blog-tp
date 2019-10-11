@@ -1,0 +1,19 @@
+<header> 
+    <a id="logo" href="/" title="主题"> <img src="__HOMEIMG__/logo.png" alt="Succinct主题"></a> 
+    <a id="nav-toggle" href="#"><span></span></a>
+    <nav>
+        <div class="menu-top-container">
+            <ul id="menu-top" class="menu">
+                
+                <li class="menu-item"><a href="/">网站首页</a>
+                </li>
+                {volist name="tptop" id="vo" key="k"}
+                <li class="menu-item"><a href="/view/{$vo.id}.html">{$vo.name}</a></li>
+                {/volist}
+                <li class="menu-item"><a href="#">友情链接</a></li>
+                <li class="menu-item"><a target="_blank" href="http://www.geekxz.com">下载主题</a></li>
+            </ul>
+        </div>
+    </nav>
+    <i class="js-toggle-search fa fa-search"></i> 
+</header>
