@@ -18,14 +18,17 @@ geekxz-blog 是一套前后端完整的解决方案。
 
 
 ## 讨论交流
+
 QQ 交流群
 QQ 群号：689112212
+
 ![image](http://blog.geekxz.com/qq.jpg)
 
 
 
 ## 微信公众号
-微信搜索：林间有风
+微信搜索：极客小寨工作室
+
 ![image](http://blog.geekxz.com/wx_code.jpg)
 
 
