@@ -2,7 +2,35 @@
 A simple and practical Blog implememted by ThinkPHP 5.0
 
 Blog 基于thinkphp开发的一套个人简洁的社区Blog主题系统
-===============
+=====================================================
+
+简介
+
+geekxz-blog 是极客小站工作室团队提炼出的一套简单博客管理系统框架。
+
+geekxz-blog 可以有效的帮助开发者提高 Blog 的开发效率。
+
+geekxz-blog 是一套前后端完整的解决方案。
+
+线上 Demo
+
+可直接参考官方团队的线上Demo http://blog.geekxz.com 用户名:admin，密码：123456
+
+
+## 讨论交流
+QQ 交流群
+QQ 群号：689112212
+![image](http://blog.geekxz.com/qq.jpg)
+
+
+
+## 微信公众号
+微信搜索：林间有风
+![image](http://blog.geekxz.com/wx_code.jpg)
+
+
+
+
 
 ## 目录结构
 
